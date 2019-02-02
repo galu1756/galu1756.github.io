@@ -1,0 +1,65 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: inherit;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-image: linear-gradient(to top right, darkblue, aqua, darkblue);
+  color: Black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-image: linear-gradient(to top right, black, red, darkred); /*this code originated from w3schools.com*/
+  color: white;
+}
+/*this was taken from w3schools.com*/
+
+body
+{
+  background-image: linear-gradient(to right, darkblue, blue, aqua, white, aqua, blue, darkblue, blue, aqua, white, aqua, blue, darkblue);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p
+{
+    text-align: center;
+    font-size: 1vw;
+    color: white;
+}
+
+h1
+{
+    text-align: center;
+    text-decoration: wavy underline;
+    text-decoration-color: navy;
+    font-style: italic; /*sunny helped me*/
+    font-size: 4vw;
+}
+
+h2
+{
+    text-decoration: wavy underline;
+    font-size: 2vw;
+    text-align: center;
+}
+
+th
+{
+    font-size: 1vw;
+    color: black;
+}

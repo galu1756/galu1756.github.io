@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Mini-Projects</title>
+    <link rel="stylesheet" href="miniProject.css">
+    <script src="miniProject.js"></script>
+</head>
+<body>
+<div class="topnav" align="center">
+    <a href="index.html">Home</a>
+    <a href="FamilyPage.html">Family</a>
+    <a href="Interests.html">Interests</a>
+    <a href="BB-8.html">BB-8 Moves Like Cool Boi</a>
+    <a class="active" href="miniProject.html">Mini-Projects</a>
+    <a href="binary.html">Binary Converter</a>
+    <a href="javaCalc.html">Java Calculator</a>
+</div>
+
+<form name="project1">
+    <h4>Temperature Bug</h4>
+    <br>
+    <img id="weather" src="" height="200">
+    <br>
+    Enter temperature here: <input type="text" name="temp">
+    <br>
+    <button type="button" onclick="document.project1.result.value=temperatureBug()">Find Season</button>
+    <input type="text" readonly="true" name="result" style="border-style: none">
+</form> <!--done-->
+
+<form name="project2">
+    <h4>Calorie Counter</h4>
+    <br><br>
+    <select name="activities">
+        <option>Select . . . </option>
+        <option value="Bowling">Bowling</option>
+        <option value="Soccer">Soccer</option>
+        <option value="Football">Football</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Egg">Video Games</option>
+
+    </select>
+
+    <br>
+    Enter duration of activity (in minutes): <input type="text" name="num1">
+    <br>
+    <button type="button" onclick="document.project2.result.value=calorieCounter()">Count Calories</button>
+    <input type="text" readonly="true" name="result" size="25px">
+</form> <!--done-->
+
+<form name="project3">
+    <h4>Assign Your Grade</h4>
+    <br><br>
+    Please enter grade here: <input type="text" name="num1">
+    <br>
+    <button type="button" onclick="document.project3.result.value=assignGrade()">Find Score</button>
+    <input type="text" readonly="true" name="result" style="border-style: none">
+</form> <!--done-->
+
+
+<br><br>
+<h2>Try Out Your MadLib Today!!!</h2>
+<br>
+
+
+<form name="story">
+    Adjective 1:<input type="text" name="input1">
+    <br>
+    Adjective 2:<input type="text" name="input2">
+    <br>
+    Adjective 3:<input type="text" name="input3">
+    <br>
+    Adjective 4:<input type="text" name="input4">
+    <br>
+    Adjective 5:<input type="text" name="input5">
+    <br>
+    Animal:<input type="text" name="input6">
+    <br>
+    Noun 1:<input type="text" name="input7">
+    <br>
+    Noun 2:<input type="text" name="input8">
+    <br>
+    Noun 3:<input type="text" name="input9">
+    <br>
+    Noun 4:<input type="text" name="input10">
+    <br>
+    Number:<input type="text" name="input11">
+    <br>
+    Past Tense Verb:<input type="text" name="input12">
+    <br>
+    Person You Know<input type="text" name="input13">
+    <br>
+    Person You Know<input type="text" name="input14">
+    <br>
+    Plural Noun:<input type="text" name="input15">
+    <br>
+    Plural Part of the Body:<input type="text" name="input16">
+    <br><br>
+
+    <button type="button" onclick="document.getElementById('words').innerHTML=storyTime()">Click Here to View Your Story</button>
+
+
+</form>
+
+<p id="words">
+
+
+</p>
+
+<form name="myQuiz">
+    <br>
+    <strong>Question 1:</strong> What is my favorite thing to do outside of school?<br>
+    <input type="checkbox" name="a1A" value="SneakOut">Sneak Out<br>
+    <input type="checkbox" name="a1B" value="Sleep">Sleep<br>
+    <input type="checkbox" name="a1C" value="Friends">Hang Out With Friends<br>
+    <input type="checkbox" name="a1D" value="Play">Play Video Games<br>
+
+    <br><br>
+    <strong>Question 2:</strong> What ethnicity am I?<br>
+    <input type="radio" name="a2" value="Mexican">Mexican<br>
+    <input type="radio" name="a2" value="Romanian">Romanian<br>
+    <input type="radio" name="a2" value="Irish">Irish<br>
+    <input type="radio" name="a2" value="Polish">Polish<br>
+
+    <br><br>
+
+    <strong>Question 3:</strong> What is my full name? <input name="name" value="">
+
+    <br><br>
+
+    <strong>Question 4:</strong> What is my age? <input name="age" value="">
+
+    <br><br>
+
+    <strong>Question 5:</strong> What instrument(s) do I play?<br>
+    <input type="checkbox" name="b1A" value="tenorSax">Tenor Saxophone<br>
+    <input type="checkbox" name="b1B" value="bariSax">Bari Saxophone<br>
+    <input type="checkbox" name="b1C" value="guitar">Guitar<br>
+    <input type="checkbox" name="b1D" value="piano">Piano<br>
+
+    <br><br>
+
+    <strong>Question 6:</strong> Where was I born?<br>
+    <input type="radio" name="b2" value="romania">Romania<br>
+    <input type="radio" name="b2" value="unitedStates">United States<br>
+    <input type="radio" name="b2" value="hungary">Hungary<br>
+    <input type="radio" name="b2" value="poland">Poland<br>
+
+
+    <br><br>
+
+
+    <button type="button" onclick="document.getElementById('answers').innerHTML=checkAnswers()">Check Your Responses</button>
+
+    <p id="answers">
+
+    </p>
+
+</form>
+
+
+
+</body>
+</html>

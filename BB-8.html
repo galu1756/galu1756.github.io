@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <div class="topnav" align="center">
+        <a href="index.html">Home</a>
+        <a href="FamilyPage.html">Family</a>
+        <a href="Interests.html">Interests</a>
+        <a class="active" href="BB-8.html">BB-8 Moves Like Cool Boi</a>
+        <a href="miniProject.html">Mini-Projects</a>
+        <a href="binary.html">Binary Converter</a>
+        <a href="javaCalc.html">Java Calculator</a>
+    </div>
+
+    <meta charset="UTF-8">
+    <title>BB-8</title>
+    <link rel="stylesheet" type="text/css" href="BB-8Colour.css">
+    <script>
+        function drawRectangles()
+        {
+            //ties the <canvas> obj from index.html to your javascript code
+            var canvas = document.getElementById("myCanvas");
+            //this next line is arguably the most important
+            var ctx = canvas.getContext("2d");
+            //draw a rectangle
+            ctx.fillStyle = "#855d09";
+            ctx.fillRect(0,250,500,250);
+
+            ctx.fillStyle = "#84b1ff";
+            ctx.fillRect(0,0,500,250);
+
+        }
+
+        var a;
+        var eyeX = 245;
+        var eyeY = 130;
+        var moveX = 5;
+
+        function moveEye()
+        {
+            var canvas = document.getElementById("myCanvas");
+
+            var ctx = canvas.getContext("2d");
+
+
+        }
+
+
+        function drawCircle()
+        {
+            var canvas = document.getElementById("myCanvas");
+
+            var ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.arc(250,225,75,0,360);
+            ctx.fillStyle = "#ffffff";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(250,150,50,0,Math.PI,true);
+            ctx.fillStyle = "#ffffff";
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        function drawLines()
+        {
+            var canvas = document.getElementById("myCanvas");
+
+            var ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.lineTo(200,150);
+            ctx.lineWidth = 3;
+            ctx.lineTo(300,150);
+            ctx.strokeStyle = "#000000";
+            ctx.stroke();
+
+        }
+
+        function drawEye()
+        {
+            var canvas = document.getElementById("myCanvas");
+
+            var ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.arc(250,125,15,0,360);
+            ctx.fillStyle = "#000000";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(eyeX,eyeY,5,0,360);
+            ctx.fillStyle = "#ff0005";
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        var cloudX = 25;
+
+        function drawCloud()
+        {
+            var canvas = document.getElementById("myCanvas");
+
+            var ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.arc(cloudX,45,35,0,360);
+            ctx.fillStyle = "#ffffff";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(cloudX + 100,45,35,0,360);
+            ctx.fillStyle = "#ffffff";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(cloudX + 50,45,50,0,360);
+            ctx.fillStyle = "#ffffff";
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        function moveCloud()
+        {
+            cloudX = cloudX + moveX;
+        }
+
+        function bouncCloud()
+        {
+            if (cloudX > 600)
+            {
+                moveX = moveX * (-1);
+            }
+
+            if (cloudX < 0)
+            {
+                moveX = moveX;
+            }
+        }
+
+        function drawDecal()
+        {
+            var canvas = document.getElementById("myCanvas");
+
+            var ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.arc(250,225,35,0,360);
+            ctx.fillStyle = "#ff8d3b";
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        function initialize()
+        {
+            drawRectangles();
+            drawCircle();
+            drawLines();
+            drawDecal();
+
+        }
+
+        function drawShapes()
+        {
+            a = requestAnimationFrame(drawShapes);
+            drawRectangles();
+            drawCircle();
+            drawLines();
+            drawEye();
+            drawDecal();
+            drawCloud();
+            bouncCloud();
+        }
+
+    </script>
+
+</head>
+<body>
+
+<br><br><br>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+
+<button type="button" onclick="drawShapes()">Click to draw!</button>
+
+<button type="button" onclick="moveCloud()">Animate!</button>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

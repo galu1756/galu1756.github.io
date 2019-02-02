@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Binary</title>
+    <link rel="stylesheet" href="binary.css">
+    <script src="binary.js"></script>
+</head>
+<body>
+<div class="topnav" align="center">
+    <a href="index.html">Home</a>
+    <a href="FamilyPage.html">Family</a>
+    <a href="Interests.html">Interests</a>
+    <a href="BB-8.html">BB-8 Moves Like Cool Boi</a>
+    <a href="miniProject.html">Mini-Projects</a>
+    <a class="active" href="binary.html">Binary Converter</a>
+    <a href="javaCalc.html">Java Calculator</a>
+</div>
+<br>
+<form name="toBinary">
+    <h4>To Binary Converter</h4>
+    Input Number: <input name="num">
+    <br>
+    Outcome: <input name="result" readonly="true" size="50">
+    <br>
+    <button type="button" onclick="document.toBinary.result.value=tenToBinary()">To Binary</button>
+</form>
+
+<br><br>
+
+<form name="toTen">
+    <h4>To Base 10 converter</h4>
+    Input Number: <input name="num">
+    <br>
+    Input Base: <input name="base">
+    <br>
+    Outcome: <input name="result" readonly="true" size="50">
+    <br>
+    <button type="button" onclick="document.toTen.result.value=toBase10()">To Base 10</button>
+</form>
+
+<br><br>
+
+<form name="toBase">
+    <h4>Any Base Converter</h4>
+    Input Number: <input name="num">
+    <br>
+    Enter Income Base: <input name="base">
+    <br>
+    Enter Outcome Base: <input name="out">
+    <br>
+    Outcome: <input name="result" readonly="true" size="50">
+    <br>
+    <button type="button" onclick="document.toBase.result.value=xToY(Number(document.toBase.num.value), Number(document.toBase.base.value), Number(document.toBase.out.value))">Base Converter</button>
+</form>
+
+
+</body>
+</html>
